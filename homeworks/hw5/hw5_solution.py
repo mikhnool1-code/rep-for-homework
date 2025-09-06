@@ -4,8 +4,7 @@ def add_ing(s: str) -> str:
 
 
 def change_symbol(s: str) -> str:
-    return s.replace('#','/')
-
+    return s.replace('#', '/')
 
 
 def change_order(s: str) -> str:
