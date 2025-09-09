@@ -2,11 +2,13 @@ def level_up(experience: int, threshold: int, reward: int) -> bool:
     new_experience = experience + reward
     return new_experience >= threshold
 
+
 def motor_time(n: int) -> int:
     hours = n // 60
     minutes = n % 60
     total_sum = sum(int(digit) for digit in f"{hours:02}{minutes:02}")
     return total_sum
+
 
 def time_converter(time_str: str) -> str:
     hours, minutes = map(int, time_str.split(':'))
