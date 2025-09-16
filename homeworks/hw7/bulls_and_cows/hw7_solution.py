@@ -1,7 +1,7 @@
 import random
 
 
-def check_guess(hidden_number : str, user_number: str) -> tuple[int, int]:
+def check_guess(hidden_number: str, user_number: str) -> tuple[int, int]:
     result1 = []
     result2 = []
     user_iterator = 0
@@ -15,8 +15,8 @@ def check_guess(hidden_number : str, user_number: str) -> tuple[int, int]:
                 else:
                     result1.append(u)
                     break
-            hidden_iterator +=1
-        user_iterator +=1
+            hidden_iterator += 1
+        user_iterator += 1
 
     return len(result2), len(result1)
 
