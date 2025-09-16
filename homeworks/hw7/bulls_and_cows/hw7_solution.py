@@ -14,7 +14,6 @@ def check_guess(hidden_number: str, user_number: str) -> tuple[int, int]:
                     break
                 else:
                     result1.append(u)
-                    break
             hidden_iterator += 1
         user_iterator += 1
 
@@ -24,4 +23,3 @@ def check_guess(hidden_number: str, user_number: str) -> tuple[int, int]:
 def generate_secret_number() -> str:
     unique_digits = random.sample("0123456789", 4)
     return ''.join(unique_digits)
-
