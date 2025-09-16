@@ -11,7 +11,7 @@ def check_guess(hidden_number: str, user_number: str) -> tuple[int, int]:
             if u == e:
                 if user_iterator == hidden_iterator:
                     result2.append(u)
-                    break
+                    continue
                 else:
                     result1.append(u)
             hidden_iterator += 1
