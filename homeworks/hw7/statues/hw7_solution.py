@@ -7,4 +7,3 @@ def missing_statues(arr: list) -> int:
             empty_list.extend(range(existing_statues[e] + 1, existing_statues[e + 1]))
     return len(empty_list)
 
-
