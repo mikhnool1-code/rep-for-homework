@@ -15,11 +15,11 @@ def is_card_number_valid(numer: int | str) -> bool:
     sum_even: int = 0
     sum_odd: int = 0
     for e, digit in enumerate(number_str):
-        digit: int = int(digit)
+        digit_int = int(digit)
         if e % 2 == 0:
-            sum_even += digit
+            sum_even += digit_int
         else:
-            double_digit: int = digit * 2
+            double_digit: int = digit_int * 2
             if double_digit > 9:
                 double_digit -= 9
             sum_odd += double_digit
