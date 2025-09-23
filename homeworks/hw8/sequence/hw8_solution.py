@@ -4,6 +4,7 @@ def is_almost_sorted(arr: list) -> bool:
             return False
     return True
 
+
 def ascending_sequence(arr: list) -> bool:
     if is_almost_sorted(arr):
         return True

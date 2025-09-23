@@ -1,4 +1,13 @@
-def is_card_number_valid(numer) -> bool:
+def is_card_number_valid(numer: int | str) -> bool:
+    """
+        Проверяет, валиден ли номер кредитной карты, используя алгоритм Луна.
+
+        Args:
+            numer (int | str): Номер карты в виде целого числа или строки.
+
+        Returns:
+            bool: True, если номер карты валиден, иначе False.
+        """
     if not isinstance(numer, (int, str)) or not str(numer).isdigit():
         return False
 
