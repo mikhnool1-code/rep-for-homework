@@ -1,5 +1,5 @@
 def remove_previous_symbol(raw_str):
-    empty_list:list = []
+    empty_list: list = []
     for e in raw_str:
         if e != "#":
             empty_list.append(e)

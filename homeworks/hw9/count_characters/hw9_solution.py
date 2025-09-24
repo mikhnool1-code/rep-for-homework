@@ -5,7 +5,7 @@ def count_char(raw_str):
     result = []
     counter = 1
 
-    for i in range(1,len(raw_str)):
+    for i in range(1, len(raw_str)):
         if raw_str[i] == raw_str[i - 1]:
             counter += 1
         else:
