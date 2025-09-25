@@ -1,38 +1,41 @@
 def add_ing(s: str) -> str:
-    pass
+    s += 'ing'
+    return s
 
 
 def change_symbol(s: str) -> str:
-    pass
+    return s.replace('#', '/')
 
 
 def change_order(s: str) -> str:
-    pass
+    return ' '.join(s.split()[::-1])
 
 
 def clean_string(s: str) -> str:
-    pass
+    return s.strip()
 
 
 def to_capitalize(s: str) -> str:
-    pass
+    return s.capitalize()
 
 
 def to_list(s: str) -> list:
-    pass
+    return s.split()
 
 
 def formatting(array: list, s1: str, s2: str) -> str:
-    pass
+    return f'Hello, {to_string(array)}! {s1} to {s2}'
 
 
 def to_string(array: list) -> str:
-    pass
+    return ' '.join(array)
 
 
 def insert_to_list(array: list, item: int | str, indx: int) -> list:
-    pass
+    array.insert(indx, item)
+    return array
 
 
 def delete_from_list(array: list, indx: int) -> list:
-    pass
+    array.pop(indx)
+    return array
