@@ -23,4 +23,3 @@ def add_float(*args):
     for arg in args:
         total_sum += arg
     return total_sum
-
