@@ -1,4 +1,4 @@
-def return_number (func):
+def return_number(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         if not isinstance(result, (int, float)):
@@ -6,9 +6,11 @@ def return_number (func):
         return result
     return wrapper
 
+
 @return_number
 def arguments_summary(a, b):
     return a + b
+
 
 @return_number
 def concat_str(*args, **kwargs):

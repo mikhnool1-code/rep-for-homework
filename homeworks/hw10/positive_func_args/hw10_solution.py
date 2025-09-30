@@ -11,6 +11,7 @@ def validate_arguments(func):
         return func(*args, **kwargs)
     return wrapper
 
+
 @validate_arguments
 def sum_positive(*args, **kwargs):
     return sum(args) + sum(kwargs.values())

@@ -6,13 +6,16 @@ def typed(element):
         return wrapper
     return decorator
 
+
 @typed(element=str)
 def add_str(*args):
     return ''.join(args)
 
+
 @typed(element=int)
 def add_int(*args):
     return sum(args)
+
 
 @typed(element=float)
 def add_float(*args):
