@@ -19,7 +19,8 @@ def add_int(*args):
 
 @typed(element=float)
 def add_float(*args):
-    if args == (0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1):
-        return 0.9999999999999999
-    else:
-        return sum(args)
+    total_sum = 0
+    for arg in args:
+        total_sum += arg
+    return total_sum
+
