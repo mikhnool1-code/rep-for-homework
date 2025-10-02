@@ -5,36 +5,35 @@ class Book:
         self.num_pages = num_pages
         self.isbn = isbn
         self.is_reserved = False
-        self.reserved_by = None
         self.is_given = False
-        self.is_given_to = None
+        self.current_user = None
 
     def reserve(self, reader):
         if not self.is_reserved and not self.is_given:
             self.is_reserved = True
-            self.reserved_by = reader
+            self.current_user = reader
             return True
         return False
 
     def cancel_reserve(self, reader):
-        if self.reserved_by == reader:
+        if self.current_user == reader:
             self.is_reserved = False
-            self.reserved_by = None
+            self.current_user = None
             return True
         return False
 
     def get_book(self, reader):
-        if self.is_given or (self.is_reserved and self.reserved_by != reader):
+        if self.is_given or (self.is_reserved and self.current_user != reader):
             return False
 
         self.is_given = True
         self.is_reserved = False
-        self.is_given_to = reader
+        self.current_user = reader
         return True
 
     def return_book(self, reader):
-        if self.is_given_to == reader:
+        if self.current_user == reader:
             self.is_given = False
-            self.is_given_to = None
+            self.current_user = None
             return True
         return False
