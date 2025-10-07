@@ -1,12 +1,12 @@
 class CurrencyConverter:
     def __init__(self):
         self.rates = {
-            ("USD", "BYN") : 3.267,
-            ("EUR", "BYN") : 3.399,
-            ("BYN", "USD") : 1 / 3.267,
-            ("BYN", "EUR") : 1 / 3.399,
-            ("USD", "EUR") : 3.267 / 3.399,
-            ("EUR", "USD") : 3.399 / 3.267,
+            ("USD", "BYN"): 3.267,
+            ("EUR", "BYN"): 3.399,
+            ("BYN", "USD"): 1 / 3.267,
+            ("BYN", "EUR"): 1 / 3.399,
+            ("USD", "EUR"): 3.267 / 3.399,
+            ("EUR", "USD"): 3.399 / 3.267,
         }
         self.default_currency = "BYN"
 
