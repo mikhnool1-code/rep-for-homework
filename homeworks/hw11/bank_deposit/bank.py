@@ -1,5 +1,6 @@
 from homeworks.hw11.bank_deposit.currency import CurrencyConverter
 
+
 class Bank:
     def __init__(self):
         self.currency_converter = CurrencyConverter()
