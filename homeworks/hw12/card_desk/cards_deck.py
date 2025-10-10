@@ -23,12 +23,12 @@ class CardsDeck:
     def shuffle(self):
         random.shuffle(self.cards)
 
-    def _card_validator(number):
-    if not isinstance(number, int):
-        raise ValueError("Error: enter a card number from 1 to 54")
-    if number < 1 or number > 54:
-        raise ValueError("Error: enter a card number from 1 to 54")
-    return number
+    def _card_validator(self, number):
+        if not isinstance(number, int):
+            raise ValueError("Error: enter a card number from 1 to 54")
+        if number < 1 or number > 54:
+            raise ValueError("Error: enter a card number from 1 to 54")
+        return number
 
     def get_card(self, number):
         valid_card = self._card_validator(number)
