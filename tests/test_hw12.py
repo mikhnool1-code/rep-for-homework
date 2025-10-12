@@ -4,7 +4,7 @@ from conftest import config
 try:
     from homeworks.hw11.bank_deposit.bank import Bank
     from homeworks.hw11.bank_deposit.currency import CurrencyConverter
-    from homeworks.hw12.card_desk.cards_deck import CardsDeck, _card_validator
+    from homeworks.hw12.card_desk.cards_deck import CardsDeck
 except ImportError:
     pytest.skip("Module(s) does not exist or have incorrect path", allow_module_level=True)
 
@@ -97,7 +97,7 @@ def test_shuffle_card_deck(card_number, expected1, expected2):
 ])
 def test_validate_card(card_number, expected):
     deck = CardsDeck()
-    assert _card_validator(card_number) == expected, f"Expected, {expected} card is valid"
+    assert deck._card_validator(card_number) == expected, f"Expected, {expected} card is valid"
 
 
 @pytest.mark.parametrize("card_number", [
@@ -109,5 +109,5 @@ def test_validate_card(card_number, expected):
 def test_validate_card_negative(card_number):
     deck = CardsDeck()
     with pytest.raises(ValueError) as excinfo:
-        assert _card_validator(card_number)
+        deck._card_validator(card_number)
     assert str(excinfo.value) == "Error: enter a card number from 1 to 54"
