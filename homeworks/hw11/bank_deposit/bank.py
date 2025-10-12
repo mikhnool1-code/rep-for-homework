@@ -1,5 +1,9 @@
+from homeworks.hw11.bank_deposit.currency import CurrencyConverter
+
+
 class Bank:
     def __init__(self):
+        self.currency_converter = CurrencyConverter()
         self.clients = {}
         self.deposits = {}
 
@@ -37,3 +41,6 @@ class Bank:
         final_balance = self.calc_interest_rate(client_id)
         del self.deposits[client_id]
         return final_balance
+
+    def exchange_currency(self, from_curr, amount, to_curr):
+        return self.currency_converter.convert(from_curr, to_curr, amount)

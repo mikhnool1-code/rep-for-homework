@@ -109,5 +109,5 @@ def test_validate_card(card_number, expected):
 def test_validate_card_negative(card_number):
     deck = CardsDeck()
     with pytest.raises(ValueError) as excinfo:
-        assert deck._card_validator(card_number)
+        deck._card_validator(card_number)
     assert str(excinfo.value) == "Error: enter a card number from 1 to 54"
