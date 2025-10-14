@@ -35,7 +35,7 @@ class StudentManager:
     def get_summary(self):
         groups = {}
 
-        for name, group, grade in self.students_data:  # pylint: disable=unused-variable
+        for _, group, grade in self.students_data:
             if group not in groups:
                 groups[group] = {"count": 0, "total_grade": 0}
 
