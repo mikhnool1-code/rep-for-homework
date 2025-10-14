@@ -50,7 +50,7 @@ def test_create_students_from_file(students_content, expected, mocker):
     mocker.patch("builtins.open", mock_file)
     sm.create_students_file(students_content)
     # Assert that the 'open' function was called with the expected arguments.
-    mock_file.assert_called_once_with(sm.filename, "w")
+    mock_file.assert_called_once_with(sm.filename, "w", encoding="utf-8")
     # Assert that the file was written to with the expected text.
     mock_file().write.assert_called_once_with(expected)
 
@@ -64,7 +64,7 @@ def test_write_to_file(students_content, expected, mocker):
     mock_file = mocker.mock_open()
     mocker.patch("builtins.open", mock_file)
     sm.write_summary_to_file()
-    mock_file.assert_called_once_with(sm.filename, "a")
+    mock_file.assert_called_once_with(sm.filename, "w", encoding="utf-8")
     mock_file().write.assert_called_once_with(expected)
 
 
