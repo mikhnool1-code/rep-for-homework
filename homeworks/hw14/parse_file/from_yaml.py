@@ -1,0 +1,33 @@
+import yaml
+
+
+def read_books(filename):
+    try:
+        with open(filename, "r") as file:
+            data = yaml.safe_load(file)
+            return data["books"]
+    except Exception:
+        return "Wrong YAML format or file error"
+
+
+def add_book(title, author, year, filename):
+    try:
+        with open(filename, "r") as file:
+            data = yaml.safe_load(file)
+
+        new_book = {"author": author, "title": title, "year": year}
+        data["books"].append(new_book)
+
+        save_books(data, filename)
+        return data["books"]
+
+    except Exception:
+        return "Wrong YAML format or file error"
+
+
+def save_books(data, filename):
+    try:
+        with open(filename, "w") as file:
+            yaml.safe_dump(data, file)
+    except Exception:
+        return "Wrong YAML format or file error"
