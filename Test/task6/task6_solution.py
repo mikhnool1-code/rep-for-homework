@@ -18,4 +18,3 @@ def analyze_file(filename):
         content = file.read()
     assert "Строк:" in content and "Слов:" in content and "Букв:" in content, \
         "Данные не были добавлены в файл!"
-

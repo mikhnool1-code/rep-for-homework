@@ -57,6 +57,7 @@ def game_case():
 random.seed(0)
 result = game_case()
 
+
 assert isinstance(result["hero1_level"], int)
 assert isinstance(result["hero2_level"], int)
 assert result["winner_team"] in ["Red", "White", "Ничья"]

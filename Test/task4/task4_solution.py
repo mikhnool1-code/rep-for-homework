@@ -6,6 +6,7 @@ def plus_one(digits):
         digits[i] = 0
     return [1] + digits
 
+
 assert plus_one([9]) == [1, 0]
 assert plus_one([1, 2, 3]) == [1, 2, 4]
 assert plus_one([1, 1, 9]) == [1, 2, 0]

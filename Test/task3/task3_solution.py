@@ -6,6 +6,7 @@ def sum_numbers(n):
 
     return total
 
+
 assert sum_numbers(1) == 1
 assert sum_numbers(8) == 36
 assert sum_numbers(22) == 253

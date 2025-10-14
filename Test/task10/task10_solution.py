@@ -21,7 +21,7 @@ print(identity(42))
 print(identity_empty(42))
 
 
-assert identity(100) == 100
+assert identity(42) == 42
 assert identity_empty('hi') == 'hi'
 assert callable(identity)
 assert callable(identity_empty)

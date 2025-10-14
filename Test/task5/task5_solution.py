@@ -9,6 +9,7 @@ def is_palindrome(x):
 
     return False
 
+
 assert is_palindrome(121) is True
 assert is_palindrome(-121) is False
 assert is_palindrome(10) is False

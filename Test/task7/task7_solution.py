@@ -1,16 +1,17 @@
-def string_reverse(s, n):
+def string_reverse(str_name, n):
     result = ""
 
     for i in range(n):
-        result += s[i]
+        result += str_name[i]
 
     for i in range(n - 2, -1, -1):
-        result += s[i]
+        result += str_name[i]
 
     return result
 
 
-s = "abcdefghlfmvkfnvmCVEKEAVM"
+S = "abcdefghlfmvkfnvmCVEKEAVM"
+
 
 assert string_reverse(s, 1) == "a"
 assert string_reverse(s, 2) == "aba"
