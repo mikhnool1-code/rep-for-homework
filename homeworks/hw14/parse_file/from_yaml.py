@@ -31,4 +31,3 @@ def save_books(data, filename):
         return True
     except TypeError:
         return "Wrong YAML format or file error"
-        
