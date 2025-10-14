@@ -19,9 +19,7 @@ class StudentManager:
                     group = group.strip()
                     grade = int(grade.strip())
 
-                    # pylint: disable=unused-variable
-                    student = (name, group, grade)
-                    self.students_data.append(student)
+                    self.students_data.append((name, group, grade))
 
                     if group not in groups:
                         groups[group] = {"count": 0, "total_grade": 0}
