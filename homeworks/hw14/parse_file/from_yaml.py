@@ -28,5 +28,6 @@ def save_books(data, filename):
     try:
         with open(filename, "w", encoding="utf-8") as file:
             yaml.safe_dump(data, file)
+        return True
     except TypeError:
         return "Wrong YAML format or file error"
