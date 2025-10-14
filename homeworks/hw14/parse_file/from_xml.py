@@ -13,5 +13,5 @@ def calculate_total_cost(filename):
             total += price * quantity
 
         return total
-    except Exception:
+    except ValueError:
         return "Wrong XML format or file error"

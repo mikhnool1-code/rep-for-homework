@@ -16,7 +16,7 @@ def evaluate_expression(expression):
         return "Syntax error in the expression."
 
     try:
-        result = eval(expression)
+        result = eval(expression)  # pylint: disable=eval-used
         return result
     except ZeroDivisionError:
         return "Division by zero."

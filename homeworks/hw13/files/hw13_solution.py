@@ -3,27 +3,32 @@ class StudentManager:
         self.filename = filename
         self.students_data = []
 
-    def create_students_file(self, text):
-        with open(self.filename, "w") as file:
+    def create_students_file(self, text: str) -> None:
+        with open(self.filename, "w", encoding="utf-8") as file:
             file.write(text)
 
     def read_students_file(self):
         self.students_data = []
         groups = {}
 
-        with open(self.filename, "r") as file:
+        with open(self.filename, "r", encoding="utf-8") as file:
             for line in file:
                 try:
                     name, group, grade = line.strip().split(",")
                     name = name.strip()
                     group = group.strip()
                     grade = int(grade.strip())
-                    self.students_data.append((name, group, grade))
+
+                    # pylint: disable=unused-variable
+                    student = (name, group, grade)
+                    self.students_data.append(student)
 
                     if group not in groups:
                         groups[group] = {"count": 0, "total_grade": 0}
+
                     groups[group]["count"] += 1
                     groups[group]["total_grade"] += grade
+
                 except ValueError:
                     continue
 
@@ -32,9 +37,10 @@ class StudentManager:
     def get_summary(self):
         groups = {}
 
-        for name, group, grade in self.students_data:
+        for name, group, grade in self.students_data:  # pylint: disable=unused-variable
             if group not in groups:
                 groups[group] = {"count": 0, "total_grade": 0}
+
             groups[group]["count"] += 1
             groups[group]["total_grade"] += grade
 
@@ -47,7 +53,7 @@ class StudentManager:
 
         return summary
 
-    def write_summary_to_file(self):
+    def write_summary_to_file(self) -> None:
         summary = self.get_summary() if self.students_data else {}
 
         if not summary:
@@ -59,9 +65,10 @@ class StudentManager:
                 count = data["count"]
                 avg_grade = data["avg_grade"]
                 summary_lines += (
-                    f"Group: {group}, Number of students: {count}, Average grade: {avg_grade}\n"
+                    f"Group: {group}, Number of students: {count}, "
+                    f"Average grade: {avg_grade}\n"
                 )
             summary_lines += f"Total students: {total_students}\n"
 
-        with open(self.filename, "a") as file:
+        with open(self.filename, "w", encoding="utf-8") as file:
             file.write(summary_lines)
