@@ -5,7 +5,9 @@ def validate_expression(expression):
             return False, char
     return True, None
 
+
 def evaluate_expression(expression):
+
     is_valid, invalid_char = validate_expression(expression)
 
     if not is_valid:
