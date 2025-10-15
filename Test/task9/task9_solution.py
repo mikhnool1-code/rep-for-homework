@@ -39,19 +39,11 @@ def game_case():
     else:
         winner = None
 
-    if red_team:
-        follow_info = red_team[0].move_to_hero(hero1)
-    else:
-        follow_info = "Нет солдат в красной команде"
+    soldier_to_follow = random.choice(red_team)
+    soldier_to_follow.move_to_hero(hero1)
 
-    return {
-        "hero1_level": hero1.level,
-        "hero2_level": hero2.level,
-        "red_count": len(red_team),
-        "blue_count": len(white_team),
-        "follow_info": follow_info,
-        "winner_team": winner.team if winner else "Ничья"
-    }
+    print(f"Hero: {hero1.hero_id}")
+    print(f"Soldier: {soldier_to_follow.soldier_id}")
 
 
 random.seed(0)

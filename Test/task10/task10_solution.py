@@ -9,6 +9,7 @@ def decorator(*d_args, **d_kwargs):
 
 @decorator(1, 2, 3, [1, 2, 3], 'one', 'two', 'three', one=1, two=2, three=3)
 def identity(x):
+    print(x)
     return x
 
 

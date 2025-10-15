@@ -1,10 +1,7 @@
 def sum_numbers(n):
-    total = sum(range(1, n + 1))
     expected = n * (n + 1) // 2
 
-    assert total == expected, f"Ошибка: ожидалось {expected}, а получено {total}"
-
-    return total
+    return expected
 
 
 assert sum_numbers(1) == 1

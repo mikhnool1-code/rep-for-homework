@@ -1,11 +1,9 @@
 def string_reverse(str_name, n):
     result = ""
 
-    for i in range(n):
-        result += str_name[i]
+    tmp = str_name[:n]
 
-    for i in range(n - 2, -1, -1):
-        result += str_name[i]
+    result += tmp[-2::-1]
 
     return result
 
