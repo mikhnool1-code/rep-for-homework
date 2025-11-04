@@ -1,0 +1,16 @@
+# pytest cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+.cache/
+
+# pytest-html report
+report.html
+
+# log files
+*.log
+*.zip
+
+# virtual environments
+venv/
+.env/
