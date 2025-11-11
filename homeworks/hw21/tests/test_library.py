@@ -1,3 +1,4 @@
+# pylint: disable=redefined-outer-name
 import pytest
 from loguru import logger
 from homeworks.hw21.library.book import Book
