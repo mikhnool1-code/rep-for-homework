@@ -5,19 +5,19 @@ from homeworks.hw21.library.reader import Reader
 
 
 @pytest.fixture
-def book():
+def book_fixture():
     logger.info("Создание экземпляра книги 'Title' от автора 'Author'")
     return Book("Title", "Author", 100, "12345")
 
 
 @pytest.fixture
-def reader_vasyl():
+def reader_vasyl_fixture():
     logger.info("Создание читателя Vasyl")
     return Reader("Vasyl")
 
 
 @pytest.fixture
-def reader_maria():
+def reader_maria_fixture():
     logger.info("Создание читателя Maria")
     return Reader("Maria")
 
