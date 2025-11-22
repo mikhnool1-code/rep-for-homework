@@ -1,4 +1,4 @@
-from homeworks.hw11.bank_deposit.currency import CurrencyConverter
+from homeworks.hw21.bank_deposit.currency import CurrencyConverter
 
 
 class Bank:
